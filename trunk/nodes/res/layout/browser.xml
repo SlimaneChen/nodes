@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+	  android:layout_margin="0px"
+      android:padding="0px"
+      android:background="@color/red"
+      >
+      
+	<!-- Action Bar -->
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="46dip"
+        android:background="#ffffffff"
+        android:padding="0px"
+        android:layout_marginTop="5px"
+        >
+     
+     <ImageView
+ 		android:src="@drawable/logo"
+		android:layout_width="57dip"
+		android:layout_height="22dip"
+		android:layout_centerVertical="true"
+		android:scaleType="fitXY"
+		android:layout_marginLeft="12dip"
+		android:onClick="visitNodes"
+		android:background="@drawable/button_bg_selector"
+		android:focusable="true"
+		/>
+		
+
+       
+	        <!-- ServerIcon -->        	                	 
+	        <ImageView
+	        		android:id="@+id/borderthree"
+	        		android:layout_toLeftOf="@+id/server"
+	        		android:layout_width="1px" android:src="@color/text" android:layout_height="wrap_content" android:text="@string/hello"
+	                android:layout_marginRight="2dip" android:layout_alignParentBottom="true" android:layout_alignParentTop="true"
+	                />
+	 
+	        <ImageView
+	        		android:id="@+id/server"
+	        		android:src="@drawable/title_server"
+	        		android:layout_toLeftOf="@+id/bordertwo"
+	        		android:onClick="startMapperService"
+					android:layout_width="45dip" android:layout_height="45dip" android:text="@string/hello"
+					android:padding="10dip"
+	                android:layout_marginRight="2dip" android:layout_centerVertical="true" android:scaleType="fitXY"
+	                android:background="@drawable/button_bg_selector" android:focusable="true"
+	                />
+	        
+	        <!-- Write Icon -->        	                	 
+	        <ImageView
+	        		android:id="@+id/bordertwo"
+	        		android:layout_toLeftOf="@+id/write"
+	        		android:layout_width="1px" android:src="@color/text" android:layout_height="wrap_content" android:text="@string/hello"
+	                android:layout_marginRight="2dip" android:layout_alignParentBottom="true" android:layout_alignParentTop="true"
+	                />
+	 
+	        <ImageView
+	        		android:id="@+id/write"
+	        		android:src="@drawable/title_write"
+	        		android:onClick="showMethodDialog" 
+	        		android:layout_toLeftOf="@+id/borderone"
+					android:layout_width="45dip" android:layout_height="45dip" android:text="@string/hello"
+					android:padding="10dip"
+					android:layout_marginRight="2dip" android:layout_centerVertical="true" android:scaleType="fitXY"
+	                android:background="@drawable/button_bg_selector" android:focusable="true"
+	                />
+	 
+			<!-- Refresh Icon --> 
+	        <ImageView
+	        		android:id="@+id/borderone"
+	        		android:layout_alignBottom="@+id/refresh"
+	        		android:layout_toLeftOf="@+id/refresh"
+	        		android:layout_width="wrap_content" android:src="@color/text" android:layout_height="wrap_content"
+	                android:layout_alignParentTop="true" android:layout_marginRight="2dip" android:layout_alignParentBottom="true"
+	                android:text="@string/hello"
+	                />
+	 
+	        <ImageView
+	        		android:id="@+id/refresh"
+	        		android:src="@drawable/title_refresh"
+	        		android:onClick="retransmitData"  
+	        		android:text="@string/hello" android:layout_width="45dip" android:layout_alignParentRight="true"
+					android:padding="10dip"
+	                android:layout_centerVertical="true" android:layout_marginRight="2dip" android:layout_height="45dip" android:scaleType="fitXY"
+	                android:background="@drawable/button_bg_selector" android:focusable="true"
+	                />
+              	                
+	</RelativeLayout>
+	
+	<!-- BrowserBar -->	
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/tab_bg_unselected"
+		android:paddingTop="1dp"
+		>
+		<EditText 
+			android:layout_width="fill_parent"
+			android:id="@+id/browserbar"
+			android:text="coap://[::1]/"
+			android:layout_height="wrap_content"
+			android:inputType="textUri"
+			android:imeOptions="actionGo"
+			android:maxLength="400"
+			android:maxLines="1"
+			>
+			</EditText>
+
+	</LinearLayout>		
+ 
+ 	<!-- WebView -->
+	<WebView
+			android:id="@+id/webkit"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			/>
+
+</LinearLayout>

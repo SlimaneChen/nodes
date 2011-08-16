@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="transparent">#00000000</color>
+	<color name="red">#ffad0505</color>
+	<color name="text">#ff575757</color>
+	<color name="tab_selected">#ff898989</color>
+	<color name="button_selected">#ffdfdfdf</color>
+	<color name="button_pressed">#ffc0c0c0</color>
+	
+</resources>

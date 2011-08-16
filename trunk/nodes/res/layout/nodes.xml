@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="0px"
+	android:padding="0px"
+	>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+	    android:layout_margin="0px"
+	    android:padding="0px"
+        android:background="@color/red"
+        >
+		<!-- Action Bar -->
+	    <RelativeLayout
+	        android:orientation="horizontal"
+	        android:layout_width="fill_parent"
+	        android:layout_height="46dip"
+	        android:background="#ffffffff"
+	        android:padding="0px"
+	        android:layout_marginTop="5px"
+	        >
+	        
+	        <ImageView
+			        android:src="@drawable/logo"
+					android:layout_width="57dip"
+	                android:layout_height="22dip"
+	                android:layout_centerVertical="true"
+	                android:scaleType="fitXY"
+	                android:layout_marginLeft="12dip"
+	                />
+	                
+	        <!-- ServerIcon -->        	                	 
+	        <ImageView
+	        		android:id="@+id/borderthree"
+	        		android:layout_toLeftOf="@+id/server"
+	        		android:layout_width="1px" android:src="@color/text" android:layout_height="wrap_content" android:text="@string/hello"
+	                android:layout_marginRight="2dip" android:layout_alignParentBottom="true" android:layout_alignParentTop="true"
+	                />
+	 
+	        <ImageView
+	        		android:id="@+id/server"
+	        		android:src="@drawable/title_server"
+	        		android:layout_toLeftOf="@+id/bordertwo"
+	        		android:onClick="startMapperService"
+					android:layout_width="45dip" android:layout_height="45dip" android:text="@string/hello"
+					android:padding="10dip"
+					android:layout_marginRight="2dip" android:layout_centerVertical="true" android:scaleType="fitXY"
+	                android:background="@drawable/button_bg_selector" android:focusable="true"
+	                />
+	        
+	        <!-- Browser Icon -->        	                	 
+	        <ImageView
+	        		android:id="@+id/bordertwo"
+	        		android:layout_toLeftOf="@+id/browser"
+	        		android:layout_width="1px" android:src="@color/text" android:layout_height="wrap_content" android:text="@string/hello"
+	                android:layout_marginRight="2dip" android:layout_alignParentBottom="true" android:layout_alignParentTop="true"
+	                />
+	 
+	        <ImageView
+	        		android:id="@+id/browser"
+	        		android:src="@drawable/title_browser"
+	        		android:layout_toLeftOf="@+id/borderone"
+	        		android:onClick="visitBrowser"
+					android:layout_width="45dip" android:layout_height="45dip" android:text="@string/hello"
+					android:padding="10dip"
+	                android:layout_marginRight="2dip" android:layout_centerVertical="true" android:scaleType="fitXY"
+	                android:background="@drawable/button_bg_selector" android:focusable="true"
+	                />
+	 
+			<!-- Refresh Icon --> 
+	        <ImageView
+	        		android:id="@+id/borderone"
+	        		android:layout_alignBottom="@+id/refresh"
+	        		android:layout_toLeftOf="@+id/refresh"  
+	        		android:layout_width="wrap_content" android:src="@color/text" android:layout_height="wrap_content"
+	                android:layout_alignParentTop="true" android:layout_marginRight="1dip" android:layout_alignParentBottom="true"
+	                android:text="@string/hello"
+	                android:visibility="invisible"
+	                />
+	 
+	        <ImageView
+	        		android:id="@+id/refresh"
+	        		android:src="@drawable/title_refresh"
+	        		android:text="@string/hello" android:layout_width="1dip" android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true" android:layout_marginRight="1dip" android:layout_height="25dip" android:scaleType="fitXY"
+	                android:background="@drawable/button_bg_selector" android:focusable="true"
+	                android:visibility="invisible"
+	                />
+	                
+		</RelativeLayout>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+            
+<!--         <LinearLayout -->
+<!-- 	        android:orientation="horizontal" -->
+<!-- 	        android:layout_width="fill_parent" -->
+<!-- 	        android:layout_height="wrap_content" -->
+<!-- 	        android:padding="5dp"> -->
+<!-- 	        <Button -->
+<!-- 				android:layout_width="wrap_content"  -->
+<!-- 				android:layout_height="wrap_content"  -->
+<!-- 			 	android:text="NodesList" -->
+<!-- 				android:onClick="visitNodesList" -->
+<!-- 				/>	 -->
+<!-- 	        <Button -->
+<!-- 				android:layout_width="wrap_content"  -->
+<!-- 				android:layout_height="wrap_content"  -->
+<!-- 			 	android:text="Node" -->
+<!-- 				android:onClick="visitNode" -->
+<!-- 				/> -->
+<!-- 			<Button -->
+<!-- 				android:layout_width="wrap_content"  -->
+<!-- 				android:layout_height="wrap_content"  -->
+<!-- 			 	android:text="Resource" -->
+<!-- 				android:onClick="visitResource" -->
+<!-- 				/> -->
+<!-- 			<Button -->
+<!-- 				android:layout_width="wrap_content"  -->
+<!-- 				android:layout_height="wrap_content"  -->
+<!-- 			 	android:text="Uri" -->
+<!-- 				android:onClick="visitUri" -->
+<!-- 				/> -->
+<!-- 		 	<TextView -->
+<!-- 				android:id="@+id/selection" -->
+<!-- 				android:layout_width="fill_parent" -->
+<!-- 				android:layout_height="wrap_content" -->
+<!-- 				android:text="select" -->
+<!-- 				/> -->
+<!-- 		</LinearLayout> -->
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="0px" />
+
+    </LinearLayout>
+
+</TabHost>

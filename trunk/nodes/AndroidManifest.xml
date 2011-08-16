@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="de.jrx.ad.nodes"
+      android:versionCode="1"
+      android:versionName="1.0">
+
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	
+    <application	android:icon="@drawable/icon"
+    				android:label="@string/app_name"
+                  	android:theme="@android:style/Theme.NoTitleBar"
+    				>
+    	
+    	<!-- NodesList Activity -->			
+        <activity	android:name="de.jrx.ad.nodes.Nodes"
+                  	android:label="Nodes"
+                  	android:screenOrientation="portrait"
+                  	>
+            <intent-filter>
+            	<action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="de.jrx.ad.nodes.NodesBookmarks"
+                  android:label="Nodes">
+        </activity> 
+        
+        <activity android:name="de.jrx.ad.nodes.NodesDiscovery"
+                  android:label="Discover">
+        </activity>
+
+		<!-- Settings Menu -->
+        <activity android:name="de.jrx.ad.nodes.Settings"
+                  android:label="Settings"
+                  android:screenOrientation="portrait"
+                  >
+        </activity>
+        
+    	<!-- Uri Activity -->			
+        <activity	android:name="de.jrx.ad.nodes.Browser"
+                  	android:label="Nodes CoAP Browser"
+                  	android:screenOrientation="portrait"
+                  	>
+                  	
+            <!-- Get coap:// URIs -->
+            <intent-filter>
+					<action android:name="android.intent.action.VIEW"/>
+					<category android:name="android.intent.category.DEFAULT"/>
+					<category android:name="android.intent.category.BROWSABLE"/>
+					<data android:scheme="coap"/>
+			</intent-filter>
+
+        </activity>
+        
+        <!-- HTTP-CoAP Mapper -->
+		<service android:name="de.jrx.ad.nodes.service.MapperService"/>
+        
+    </application>
+    
+    	<supports-screens 
+    		largeScreens="true" normalScreens="true" smallScreens="true"
+			/>
+			
+</manifest>
