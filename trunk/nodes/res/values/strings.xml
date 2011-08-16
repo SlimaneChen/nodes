@@ -14,7 +14,7 @@
     <string name="info">Nodes</string>
 	<string name="info_content"
 	>
-	Version 1.0\n\nCopyright (c) 2011 Jan Repnak (io@jrx.de). All rights reserved.\nhttp://code.google.com/nodes
+	Version 1.1\n\nCopyright (c) 2011 Jan Repnak (io@jrx.de). All rights reserved.\nhttp://code.google.com/nodes
 	\n\n
 	Nodes is a HTTP-CoAP Mapper for Android. It includes
 	a proxy server to access CoAP ressources over HTTP. 
@@ -28,8 +28,8 @@
 	any warranty of any kind. Use is permitted under the terms of the
 	GNU General Public License (GPL), Version 2 or higher.\n\n
 	Some icons used in this product are licensed under the
-	Creative Commons Attribution 3.0 Unported License. 
-	(http://creativecommons.org/licenses/by/3.0/)
+	Creative Commons Attribution 3.0 Unported License 
+	(http://creativecommons.org/licenses/by/3.0/).
 	These icons are created by Guenther Beyer (www.androidicons.com)
 	and are the property of him.
     </string>
