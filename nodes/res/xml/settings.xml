@@ -1,0 +1,43 @@
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<EditTextPreference
+		android:key="port"
+		android:title="HTTP-Server Port"
+		android:summary="Set the port for the server to bind"
+		android:dialogTitle="Default: 8080"
+		android:defaultValue="8080"
+		android:showDefault="true"
+		/>
+	<CheckBoxPreference
+		android:key="eula"
+		android:title="EULA"
+		android:defaultValue="false"
+		android:summary="Check if the EULA is accepted."
+        />
+   	<EditTextPreference
+		android:key="coapinterface"
+		android:title="Local Network Interface"
+		android:summary="The Interface to discover the Nodes"
+		android:dialogTitle="Default: eth0"
+		android:defaultValue="eth0"
+		android:showDefault="true"
+		/>
+	<EditTextPreference
+		android:key="coapmulticast"
+		android:title="Multicast Address"
+		android:summary="Set the Multicast for Node Discovery"
+		android:dialogTitle="Default: ff02::1"
+		android:defaultValue="ff02::1"
+		android:showDefault="true"
+		/>
+	<EditTextPreference
+		android:key="coapcorelink"
+		android:title="CoRE Link Format URI"
+		android:summary="Set the URI for the Resource Discovery"
+		android:dialogTitle="Default: /.well-known/core"
+		android:defaultValue="/.well-known/core"
+		android:showDefault="true"
+		/>
+		                     	
+</PreferenceScreen>

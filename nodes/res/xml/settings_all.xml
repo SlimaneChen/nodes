@@ -1,0 +1,30 @@
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<EditTextPreference
+		android:key="port"
+		android:title="Port for the HTTP-Server"
+		android:summary="Click to pop up a field for entry"
+		android:dialogTitle="Default: 8080"
+		android:showDefault="true"
+		/>
+	<EditTextPreference
+		android:key="coapinterface"
+		android:title="Local Network Interface of the CoAP-Nodes"
+		android:summary="Click to pop up a field for entry"
+		android:dialogTitle="Default: eth0"
+		/>
+	<EditTextPreference
+		android:key="coapmulticast"
+		android:title="Multicast"
+		android:summary="Click to pop up a field for entry"
+		android:dialogTitle="Default: ff02::1"
+		/>
+	<EditTextPreference
+		android:key="text"
+		android:title="coapcorelink"
+		android:summary="Click to pop up a field for entry"
+		android:dialogTitle="Default: /.well-known/core"
+		/>
+		
+</PreferenceScreen>
